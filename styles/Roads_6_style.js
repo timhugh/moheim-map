@@ -9,16 +9,16 @@ var style_Roads_6 = function(feature, resolution){
     var value = '';
     var labelText = "";
     size = 0;
-    var labelFont = "10px, sans-serif";
-    var labelFill = "#000000";
-    var bufferColor = "";
-    var bufferWidth = 0;
+    var labelFont = "10.4px \'Lato Black\', sans-serif";
+    var labelFill = "#ffffff";
+    var bufferColor = "#000000";
+    var bufferWidth = 1.3;
     var textAlign = "left";
     var offsetX = 8;
     var offsetY = 3;
     var placement = 'line';
-    if ("" !== null) {
-        labelText = String("");
+    if (feature.get("name") !== null) {
+        labelText = String(feature.get("name"));
     }
     
         function rules_Roads_6(feature, value) {

@@ -109,12 +109,15 @@ var lyr_PointsofInterest_7 = new ol.layer.Vector({
                 interactive: false,
                 title: '<img src="styles/legend/PointsofInterest_7.png" /> Points of Interest'
             });
+var group_Basemap = new ol.layer.Group({
+                                layers: [lyr_Ocean_3,lyr_Land_4,lyr_Biomes_5,],
+                                title: "Basemap"});
 var group_sources = new ol.layer.Group({
                                 layers: [lyr_20200224jopteexpedition_0,lyr_20200224timsurvey_1,lyr_20200224ydindaminproposedroads_2,],
                                 title: "sources"});
 
 lyr_20200224jopteexpedition_0.setVisible(false);lyr_20200224timsurvey_1.setVisible(false);lyr_20200224ydindaminproposedroads_2.setVisible(false);lyr_Ocean_3.setVisible(true);lyr_Land_4.setVisible(true);lyr_Biomes_5.setVisible(true);lyr_Roads_6.setVisible(true);lyr_PointsofInterest_7.setVisible(true);
-var layersList = [group_sources,lyr_Ocean_3,lyr_Land_4,lyr_Biomes_5,lyr_Roads_6,lyr_PointsofInterest_7];
+var layersList = [group_sources,group_Basemap,lyr_Roads_6,lyr_PointsofInterest_7];
 lyr_Ocean_3.set('fieldAliases', {'id': 'id', });
 lyr_Land_4.set('fieldAliases', {'id': 'id', });
 lyr_Biomes_5.set('fieldAliases', {'id': 'id', 'Biome': 'Biome', 'Label': 'Label', });
@@ -125,9 +128,9 @@ lyr_Land_4.set('fieldImages', {'id': 'TextEdit', });
 lyr_Biomes_5.set('fieldImages', {'id': 'TextEdit', 'Biome': 'TextEdit', 'Label': 'TextEdit', });
 lyr_Roads_6.set('fieldImages', {'id': 'TextEdit', 'name': 'TextEdit', 'priority': 'TextEdit', 'status': 'TextEdit', });
 lyr_PointsofInterest_7.set('fieldImages', {'id': 'TextEdit', 'label': 'TextEdit', });
-lyr_Ocean_3.set('fieldLabels', {'id': 'no label', });
-lyr_Land_4.set('fieldLabels', {'id': 'no label', });
-lyr_Biomes_5.set('fieldLabels', {'id': 'no label', 'Biome': 'no label', 'Label': 'no label', });
+lyr_Ocean_3.set('fieldLabels', {});
+lyr_Land_4.set('fieldLabels', {});
+lyr_Biomes_5.set('fieldLabels', {});
 lyr_Roads_6.set('fieldLabels', {'id': 'no label', 'name': 'no label', 'priority': 'no label', 'status': 'no label', });
 lyr_PointsofInterest_7.set('fieldLabels', {'id': 'no label', 'label': 'no label', });
 lyr_PointsofInterest_7.on('precompose', function(evt) {
