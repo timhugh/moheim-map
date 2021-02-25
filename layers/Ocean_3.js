@@ -1,1 +1,0 @@
-var json_Ocean_3 = {"type":"FeatureCollection","name":"Ocean_3","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":null},"geometry":{"type":"MultiPolygon","coordinates":[[[[-10.0,10.0],[10.0,10.0],[10.0,-10.0],[-10.0,-10.0],[-10.0,10.0]]]]}}]}
