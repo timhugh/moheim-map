@@ -56,7 +56,6 @@
             }).addTo(map);
 
             map.on('zoomend moveend', e => {
-                console.log('event', e);
                 var center = map.getCenter();
                 setParams(center.lat, center.lng, map.getZoom());
             });
