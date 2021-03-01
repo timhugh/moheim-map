@@ -62,7 +62,10 @@
 
             map.setView([0, 0], 8);
             if (isSet(params.lat) || isSet(params.lng)) {
-                map.flyTo([params.lat, params.lng], params.z || 8);
+                map.flyTo(
+                    [parseFloat(params.lat), parseFloat(params.lng)],
+                    parseInt(params.z) || 8
+                );
             }
         </script>
     </body>
